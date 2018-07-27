@@ -9,11 +9,6 @@
    vars:
       username: myuser1
    tasks:
-    - name: Install httpd on all nodes
-      yum:
-         name: httpd
-         state: latest
-
     - name: Start the httpd service on all nodes
       service:
          name: httpd
