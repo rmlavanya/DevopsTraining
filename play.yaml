@@ -5,7 +5,7 @@
    become_method: sudo
    connection: ssh
    gather_facts: yes
-      tasks:
+   tasks:
     - name: Start the httpd service on all nodes
       service:
          name: httpd
