@@ -1,5 +1,5 @@
 --- # My First Playbook#
- - hosts: all
+ - hosts: node1.chn.com
    remote_user: root
    become: yes
    become_method: sudo
