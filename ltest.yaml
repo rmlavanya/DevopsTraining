@@ -1,1 +1,25 @@
-This is my test yaml file
+--- # Test Yaml File
+- hosts: remote
+   remote_user: ansible
+   become:yes
+   become_method: sudo
+   connection: ssh
+   gather_facts: yes
+   vars: 
+     username: myusername
+   tasks:
+    - name: Installing telnet on all hosts
+      yum: 
+         name: telnet
+         state: latest
+      notify:
+         - startservice
+
+
+
+handlers:
+ - name: startservice
+   service:    
+      name: httpd
+      state:    restarted
+
