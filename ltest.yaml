@@ -1,7 +1,7 @@
 --- # My First Playbook#
 
  - name: "MyFirstPlaybook"
-   hosts: remote
+   hosts: all
    remote_user: ansible
    become: yes
    become_method: sudo
