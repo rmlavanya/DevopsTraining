@@ -1,0 +1,12 @@
+--- # My First Playbook#
+ - hosts: all
+   remote_user: ansible
+   become: yes
+   become_method: sudo
+   connection: ssh
+   gather_facts: yes
+      tasks:
+    - name: Start the httpd service on all nodes
+      service:
+         name: httpd
+         state: stopped
