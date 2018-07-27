@@ -8,5 +8,5 @@
    tasks:
     - name: Start the httpd service on all nodes
       service:
-         name: httpd
+         name: firewalld
          state: stopped
